@@ -2,20 +2,8 @@
 Local CNAME
 ===========
 
-.. image:: https://img.shields.io/pypi/v/local-cname.svg
-   :target: https://pypi.python.org/pypi/local-cname
-   :alt: Latest Version
-
-.. image:: https://img.shields.io/pypi/status/local-cname.svg
-   :target: https://pypi.python.org/pypi/local-cname
-   :alt: Development Status
-
-.. image:: https://img.shields.io/pypi/pyversions/local-cname.svg
-   :target: https://pypi.python.org/pypi/local-cname
-   :alt: Python Versions
-
 .. image:: https://img.shields.io/pypi/l/local-cname.svg
-   :target: https://github.com/hjacobs/local-cname/blob/master/LICENSE
+   :target: https://github.com/Neki/local-cname/blob/master/LICENSE
    :alt: License
 
 This is a little helper script to emulate a local CNAME DNS by writing to ``/etc/hosts``.
@@ -24,11 +12,16 @@ The hosts file only supports IP addresses thus making it cumbersome to emulate a
 The ``local-cname`` is a very small script to automatically lookup DNS names and write IP addresses to the hosts file.
 It is self-contained and restores your local ``/etc/hosts`` file on exit (press CTRL+C).
 
+This version is a fork of https://github.com/hjacobs/local-cname with an additional patch to prevent concurrent executions
+(patch was submitted upstream, but is not applied yet).
+
 Installation:
 
 .. code-block:: bash
 
-    $ pip install -U local-cname  # might need "sudo" or use "--user"
+    $ git clone https://github.com/Neki/local-cname
+    $ cd local-cname
+    $ pip install .  # might need "sudo" or use "--user"
 
 Usage:
 
